@@ -4,6 +4,10 @@ from manager import Manager
 from editor import Editor
 from analyst import Analyst
 
+# Import data
+
+from book_datasets import fiction_books, nonfiction_books
+
 def main():
     
     # Create each object
@@ -11,13 +15,15 @@ def main():
     editor_obj = Editor()
     analyst_obj = Analyst()
 
-    # Pass manager_obj to other objects
-    editor_obj.link_manager(manager_obj)
+    # Give Manager access to book data
+    manager_obj.fiction = fiction_books
+    manager_obj.nonfiction = nonfiction_books
+    
+    # Link Analyst to Manager
     analyst_obj.link_manager(manager_obj)
-
-    # Verify Handshake
-    print(editor_obj.verify_editor())
-    print(analyst_obj.verify_analyst())
+    
+    # Calls count_report() method and prints result
+    print(analyst_obj.count_report())
 
 if __name__ == "__main__":
     main()
