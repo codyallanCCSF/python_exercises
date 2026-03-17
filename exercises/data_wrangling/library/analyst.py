@@ -23,3 +23,19 @@ class Analyst:
         Non-Fiction: {nonfiction_count}
         """
 
+    def find_title(self, title):
+        
+        # Concatenate both lists of books
+        books = self.manager.fiction + self.manager.nonfiction
+        
+        for book in books:
+            if title.lower() == book["title"].lower():
+                return f"""                
+    Title: {book["title"]}
+    Author: {book["author"]}
+    Price: ${book["price"]}
+    Description: {book["info"]["description"]}
+    """
+        return "Book not found"
+
+    # FIXME Description format
