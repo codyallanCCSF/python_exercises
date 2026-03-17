@@ -519,6 +519,110 @@ fiction_books = [
             "tags": ["mystery", "nature", "coming of age", "murder", "bestseller"]
         }
     },
+    {
+        "id": "F041",
+        "title": "The Humans",
+        "author": "Matt Haig",
+        "stock": 29,
+        "price": 15.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Contemporary Fiction",
+            "description": "An alien sent to Earth to destroy a mathematical proof takes over a professor's body and is gradually undone by the baffling, beautiful messiness of human life.",
+            "tags": ["humor", "aliens", "humanity", "philosophy", "heartwarming"]
+        }
+    },
+    {
+        "id": "F042",
+        "title": "The Nightingale",
+        "author": "Kristin Hannah",
+        "stock": 58,
+        "price": 16.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Historical Fiction",
+            "description": "Two French sisters take very different paths during the Nazi occupation of World War II, each risking everything in their own acts of courage and resistance.",
+            "tags": ["WWII", "France", "sisters", "resistance", "historical"]
+        }
+    },
+    {
+        "id": "F043",
+        "title": "Firefly Lane",
+        "author": "Kristin Hannah",
+        "stock": 46,
+        "price": 16.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Contemporary Fiction",
+            "description": "Two very different girls become inseparable best friends in the 1970s and remain so across thirty years of love, loss, and life-altering choices.",
+            "tags": ["friendship", "women", "1970s", "coming of age", "emotional"]
+        }
+    },
+    {
+        "id": "F044",
+        "title": "The Martian",
+        "author": "Andy Weir",
+        "stock": 61,
+        "price": 15.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Science Fiction",
+            "description": "An astronaut accidentally left behind on Mars must use ingenuity and botany skills to survive while NASA scrambles to bring him home.",
+            "tags": ["space", "survival", "hard sci-fi", "humor", "problem-solving"]
+        }
+    },
+    {
+        "id": "F045",
+        "title": "Blood Meridian",
+        "author": "Cormac McCarthy",
+        "stock": 23,
+        "price": 16.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Western / Literary Fiction",
+            "description": "A teenage runaway joins a band of scalp hunters along the Texas-Mexico border in the 1850s in a brutal, visionary meditation on violence and history.",
+            "tags": ["Western", "violence", "dark", "American literature", "classic"]
+        }
+    },
+    {
+        "id": "F046",
+        "title": "Sea of Tranquility",
+        "author": "Emily St. John Mandel",
+        "stock": 31,
+        "price": 16.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Science Fiction",
+            "description": "A time-travel investigator moves across centuries — from 1912 Vancouver Island to a lunar colony — chasing an anomaly that threatens the fabric of reality.",
+            "tags": ["time travel", "sci-fi", "pandemic", "literary", "interconnected"]
+        }
+    },
+    {
+        "id": "F047",
+        "title": "The Song of Achilles",
+        "author": "Madeline Miller",
+        "stock": 53,
+        "price": 16.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Mythological Fiction",
+            "description": "The Iliad retold through the eyes of Patroclus, tracing his deep bond with Achilles from boyhood through the glory and tragedy of the Trojan War.",
+            "tags": ["mythology", "Greek", "LGBTQ+", "romance", "Orange Prize"]
+        }
+    },
+    {
+        "id": "F048",
+        "title": "The Archived",
+        "author": "V.E. Schwab",
+        "stock": 27,
+        "price": 15.99,
+        "formats": ["paperback", "e-book"],
+        "info": {
+            "genre": "Young Adult Fantasy",
+            "description": "A teenage girl works as a Keeper — retrieving the dead from a library where histories of lives are stored — while uncovering a conspiracy within its walls.",
+            "tags": ["YA", "fantasy", "mystery", "death", "supernatural"]
+        }
+    },
 ]
 
 
@@ -1041,6 +1145,110 @@ nonfiction_books = [
             "genre": "Narrative Nonfiction",
             "description": "The harrowing true story of a British naval vessel that wrecked off Patagonia in 1741, and the mutiny and murder that followed as survivors fought to return home.",
             "tags": ["shipwreck", "mutiny", "18th century", "survival", "adventure"]
+        }
+    },
+    {
+        "id": "NF041",
+        "title": "Talking to Strangers",
+        "author": "Malcolm Gladwell",
+        "stock": 37,
+        "price": 16.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Social Science",
+            "description": "Gladwell examines why we so consistently misread strangers, using cases from Sylvia Plath to the arrest of Sandra Bland to uncover the dangerous assumptions we make.",
+            "tags": ["psychology", "communication", "bias", "true crime", "social science"]
+        }
+    },
+    {
+        "id": "NF042",
+        "title": "Neither Here nor There: Travels in Europe",
+        "author": "Bill Bryson",
+        "stock": 24,
+        "price": 15.99,
+        "formats": ["paperback", "e-book"],
+        "info": {
+            "genre": "Travel Writing",
+            "description": "Bryson retraces a backpacking trip he took across Europe in his youth, rendering cities from Hammerfest to Istanbul with his trademark wit and comic observation.",
+            "tags": ["travel", "Europe", "humor", "memoir", "adventure"]
+        }
+    },
+    {
+        "id": "NF043",
+        "title": "In a Sunburned Country",
+        "author": "Bill Bryson",
+        "stock": 28,
+        "price": 15.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Travel Writing",
+            "description": "Bryson travels across Australia — a continent of startling beauty and lethal wildlife — and returns with a love letter to the world's most wonderfully strange nation.",
+            "tags": ["travel", "Australia", "humor", "nature", "adventure"]
+        }
+    },
+    {
+        "id": "NF044",
+        "title": "Isaac's Storm",
+        "author": "Erik Larson",
+        "stock": 22,
+        "price": 16.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Narrative Nonfiction",
+            "description": "The story of the deadliest hurricane in American history, which destroyed Galveston, Texas in 1900, told through the eyes of the city's chief meteorologist.",
+            "tags": ["disaster", "weather", "history", "Texas", "1900s"]
+        }
+    },
+    {
+        "id": "NF045",
+        "title": "American Nations",
+        "author": "Tara Westover",
+        "stock": 19,
+        "price": 17.99,
+        "formats": ["paperback", "e-book"],
+        "info": {
+            "genre": "Memoir",
+            "description": "Westover's follow-up essays explore what it means to reconstruct a self from fragments of a past defined by isolation, violence, and the slow revelation of truth.",
+            "tags": ["memoir", "identity", "family", "truth", "self-discovery"]
+        }
+    },
+    {
+        "id": "NF046",
+        "title": "Steve Jobs",
+        "author": "Walter Isaacson",
+        "stock": 47,
+        "price": 19.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Biography",
+            "description": "The definitive biography of Apple's co-founder, based on over forty interviews with Jobs himself, revealing the genius, obsession, and volatility behind his world-changing products.",
+            "tags": ["Apple", "biography", "technology", "leadership", "Silicon Valley"]
+        }
+    },
+    {
+        "id": "NF047",
+        "title": "Killers of the Flower Moon",
+        "author": "David Grann",
+        "stock": 35,
+        "price": 17.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "Narrative Nonfiction",
+            "description": "In the 1920s, members of the oil-wealthy Osage Nation were systematically murdered, leading to one of the FBI's first major investigations and a cover-up reaching the highest levels.",
+            "tags": ["Native American", "true crime", "FBI", "1920s", "Osage Nation"]
+        }
+    },
+    {
+        "id": "NF048",
+        "title": "Homo Deus: A Brief History of Tomorrow",
+        "author": "Yuval Noah Harari",
+        "stock": 40,
+        "price": 18.99,
+        "formats": ["paperback", "hardcover", "e-book"],
+        "info": {
+            "genre": "History / Futurism",
+            "description": "Harari looks beyond the present to explore what humanity might become, examining how biotechnology and artificial intelligence could redefine life, consciousness, and power.",
+            "tags": ["futurism", "AI", "biotechnology", "history", "philosophy"]
         }
     },
 ]
