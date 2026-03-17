@@ -1254,13 +1254,3 @@ nonfiction_books = [
 ]
 
 
-if __name__ == "__main__":
-    print(f"Fiction books loaded:     {len(fiction_books)}")
-    print(f"Non-fiction books loaded: {len(nonfiction_books)}")
-
-    print("\n--- Sample Fiction Entry ---")
-    import pprint
-    pprint.pprint(fiction_books[0])
-
-    print("\n--- Sample Non-Fiction Entry ---")
-    pprint.pprint(nonfiction_books[0])
