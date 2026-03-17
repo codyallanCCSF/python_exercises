@@ -21,9 +21,13 @@ def main():
     
     # Link Analyst to Manager
     analyst_obj.link_manager(manager_obj)
-    
-    # Calls count_report() method and prints result
-    print(analyst_obj.count_report())
 
+    # Get user input
+    query = input("Enter a book title: ")
+    result = analyst_obj.find_title(query)
+
+    manager_obj.display_results(result)
+    
+    
 if __name__ == "__main__":
     main()
