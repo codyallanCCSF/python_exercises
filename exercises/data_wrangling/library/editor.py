@@ -8,4 +8,4 @@ class Editor:
 
     # Method to test link
     def verify_editor(self):
-        return f"Editor Handshake: {self.mgr.system_status}"
+        return f"Editor Handshake: {self.manager.system_status}"
