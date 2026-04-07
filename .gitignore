@@ -19,3 +19,4 @@ env/
 
 # Windows metadata
 *.Zone.Identifier
+*:Zone.Identifier
