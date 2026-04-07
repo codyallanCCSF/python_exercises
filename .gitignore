@@ -16,3 +16,6 @@ env/
 .vscode/
 .idea/
 *.swp
+
+# Windows metadata
+*.Zone.Identifier
