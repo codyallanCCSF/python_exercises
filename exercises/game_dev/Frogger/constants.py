@@ -1,1 +1,6 @@
 VERSION = "1.0.0"
+
+# Window settings
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 800
+FPS = 60
