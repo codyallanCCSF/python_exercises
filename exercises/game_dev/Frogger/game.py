@@ -1,9 +1,40 @@
+import pygame
 import constants as c
 import sprites
 
 class Game:
     def __init__(self):
         print(f"[game.py] is connected! Running version {c.VERSION}")
+
+        # Initialize all imported pygame modules
+        pygame.init()
+
+        # Create game window surface
+        self.screen = pygame.display.set_mode((c.SCREEN_WIDTH, c.SCREEN_HEIGHT))
+        pygame.display.set_caption("Frogger")
+
+        # Track game state and frame timing
+        self.running = True
+        self.clock = pygame.time.Clock()
+
+    def run(self):
+        """Core game loop"""
+        while self.running:
+            # 1. Handle events (input)
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.running = False
+
+            # 2. Update game state (placeholder)
+
+            # 3. Render / Draw
+            self.screen.fill((0, 0, 0)) # Fill screen with black
+
+            pygame.display.flip() # Swap the display buffers
+            self.clock.tick(c.FPS) # Maintain 60 FPS
+
+        # Cean up when loop ends
+        pygame.quit()
 
     def say_hello(self):
         print("Hello World!")
