@@ -3,7 +3,11 @@ import constants as c
 import sprites
 
 class Game:
+    """Executes game loop - Manager Class"""
+
     def __init__(self):
+        """Initializes Game class member variables and methods"""
+
         print(f"[game.py] is connected! Running version {c.VERSION}")
 
         # Initialize all imported pygame modules
@@ -17,6 +21,11 @@ class Game:
         self.running = True
         self.clock = pygame.time.Clock()
 
+        # Initialize Frog and Sprite Group
+        self.frog = sprites.Frog()
+        self.all_sprites = pygame.sprite.Group()
+        self.all_sprites.add(self.frog)
+
     def run(self):
         """Core game loop"""
         while self.running:
@@ -29,6 +38,9 @@ class Game:
 
             # 3. Render / Draw
             self.screen.fill((0, 0, 0)) # Fill screen with black
+
+            # Draw the sprite group to the screen
+            self.all_sprites.draw(self.screen)
 
             pygame.display.flip() # Swap the display buffers
             self.clock.tick(c.FPS) # Maintain 60 FPS
