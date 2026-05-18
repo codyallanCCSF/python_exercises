@@ -33,4 +33,20 @@ class Frog(pygame.sprite.Sprite):
         elif key == pygame.K_RIGHT:
             self.rect.x += self.hop_distance
 
+        # Boundary check - Left
+        if self.rect.left < 0:
+            self.rect.left = 0
+
+        # Boundary check - Right
+        if self.rect.right > c.SCREEN_WIDTH:
+            self.rect.right = c.SCREEN_WIDTH
+
+        # Boundary check - Bottom
+        if self.rect.bottom > c.SCREEN_HEIGHT:
+            self.rect.bottom = c.SCREEN_HEIGHT
+
+        # Boundary check - Top
+        if self.rect.top < 0:
+            self.rect.top = 0
+
 
