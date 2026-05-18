@@ -21,10 +21,16 @@ class Game:
         self.running = True
         self.clock = pygame.time.Clock()
 
-        # Initialize Frog and Sprite Group
+        # Initialize Frog
         self.frog = sprites.Frog()
+
+        # Initialize car
+        self.car = sprites.Car(y_position=600, speed=5)
+        
+        # Initialize sprites group and add objects
         self.all_sprites = pygame.sprite.Group()
         self.all_sprites.add(self.frog)
+        self.all_sprites.add(self.car)
 
     def run(self):
         """Core game loop"""
@@ -39,6 +45,7 @@ class Game:
                     self.frog.handle_hop(event.key)
 
             # 2. Update game state
+            self.all_sprites.update()
 
             # 3. Render / Draw
             self.screen.fill((0, 0, 0)) # Fill screen with black
