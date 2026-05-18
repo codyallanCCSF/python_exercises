@@ -26,11 +26,23 @@ class Game:
 
         # Initialize car
         self.car = sprites.Car(y_position=600, speed=5)
+
+        # Initialize obstacles group
+        self.obstacles = pygame.sprite.Group()
+        self.obstacles.add(self.car)
         
         # Initialize sprites group and add objects
         self.all_sprites = pygame.sprite.Group()
         self.all_sprites.add(self.frog)
         self.all_sprites.add(self.car)
+
+    def check_collisions(self):
+        """Cheks if the frog has collided with any obstacle"""
+        # spritecollideany returns object it hit, or none
+        if pygame.sprite.spritecollideany(self.frog, self.obstacles):
+            print("SPLAT! The frog was hit by a car!")
+            # Reset frog position to the starting line
+            self.frog.reset_position()
 
     def run(self):
         """Core game loop"""
@@ -44,8 +56,9 @@ class Game:
                 elif event.type == pygame.KEYDOWN:
                     self.frog.handle_hop(event.key)
 
-            # 2. Update game state
+            # 2. Update game state. For every frame:
             self.all_sprites.update()
+            self.check_collisions()
 
             # 3. Render / Draw
             self.screen.fill((0, 0, 0)) # Fill screen with black

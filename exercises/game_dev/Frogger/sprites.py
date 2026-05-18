@@ -16,11 +16,17 @@ class Frog(pygame.sprite.Sprite):
 
         # Get the bounding rectandgle at bottom center
         self.rect = self.image.get_rect()
-        self.rect.centerx = c.SCREEN_WIDTH // 2
-        self.rect.bottom = c.SCREEN_HEIGHT - 20
 
         # Movement distance per key press (frog size)
         self.hop_distance = 40
+
+        # Set frog position
+        self.reset_position()
+
+    def reset_position(self):
+        """Resets the frog back to it starting position"""
+        self.rect.centerx = c.SCREEN_WIDTH // 2
+        self.rect.bottom = c.SCREEN_HEIGHT - 20
 
     def handle_hop(self, key):
         """Moves the frog a single discrete step on key press"""
