@@ -19,4 +19,18 @@ class Frog(pygame.sprite.Sprite):
         self.rect.centerx = c.SCREEN_WIDTH // 2
         self.rect.bottom = c.SCREEN_HEIGHT - 20
 
+        # Movement distance per key press (frog size)
+        self.hop_distance = 40
+
+    def handle_hop(self, key):
+        """Moves the frog a single discrete step on key press"""
+        if key == pygame.K_UP:
+            self.rect.y -= self.hop_distance
+        elif key == pygame.K_DOWN:
+            self.rect.y += self.hop_distance
+        elif key == pygame.K_LEFT:
+            self.rect.x -= self.hop_distance
+        elif key == pygame.K_RIGHT:
+            self.rect.x += self.hop_distance
+
 

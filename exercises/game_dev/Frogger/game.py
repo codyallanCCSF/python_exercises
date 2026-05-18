@@ -34,7 +34,11 @@ class Game:
                 if event.type == pygame.QUIT:
                     self.running = False
 
-            # 2. Update game state (placeholder)
+                # Check for key press
+                elif event.type == pygame.KEYDOWN:
+                    self.frog.handle_hop(event.key)
+
+            # 2. Update game state
 
             # 3. Render / Draw
             self.screen.fill((0, 0, 0)) # Fill screen with black
