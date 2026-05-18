@@ -58,29 +58,32 @@ class Frog(pygame.sprite.Sprite):
 class Car(pygame.sprite.Sprite):
     """Defines the car obstacle subclass of Sprite class"""
 
-    def __init__(self, y_position, speed):
+    def __init__(self, y_position, speed, color, x_position=0):
         """Initializes Car attributes including position and speed"""
         super().__init__()
 
         # Creat a 60x40 red rectangle for the car
         self.image = pygame.Surface((60, 40))
-        self.image.fill((255, 0, 0))
+        self.image.fill((color))
 
         self.rect = self.image.get_rect()
 
-        # Start just off the left side of the screen
-        self.rect.right = 0
+        self.rect.x = x_position
         self.rect.y = y_position
 
         self.speed = speed
 
     def update(self):
         """Automatically moves the car across the screen"""
-        self.rect.x +=self.speed
+        self.rect.x += self.speed
 
         # Reset the car to the left
         if self.rect.left > c.SCREEN_WIDTH:
             self.rect.right = 0
+
+        elif self.speed < 0:
+            if self.rect.right < 0:
+                self.rect.left = c.SCREEN_WIDTH
 
 
 

@@ -24,17 +24,38 @@ class Game:
         # Initialize Frog
         self.frog = sprites.Frog()
 
-        # Initialize car
-        self.car = sprites.Car(y_position=600, speed=5)
 
         # Initialize obstacles group
         self.obstacles = pygame.sprite.Group()
-        self.obstacles.add(self.car)
         
+        # Define lane configurations: (y_position, speed, num_cars)
+        lane_configs = [
+                {"y": 600, "speed": 3, "count": 3, "color": (255, 140, 0)},
+                {"y": 500, "speed": -4, "count": 2, "color": (138, 43, 226)}
+                ]
+        car_spacing = 220
+
+        # Loop through configurations
+        for lane in lane_configs:
+            for i in range(lane["count"]):
+                if lane["speed"] > 0:
+                    start_x = -(i * car_spacing)
+                else:
+                    start_x = c.SCREEN_WIDTH + (i * car_spacing)
+                    
+                car = sprites.Car(
+                        y_position=lane["y"], 
+                        speed=lane["speed"], 
+                        x_position=start_x,
+                        color=lane["color"]
+                        )
+                self.obstacles.add(car)
+
+
         # Initialize sprites group and add objects
         self.all_sprites = pygame.sprite.Group()
         self.all_sprites.add(self.frog)
-        self.all_sprites.add(self.car)
+        self.all_sprites.add(self.obstacles)
 
     def check_collisions(self):
         """Cheks if the frog has collided with any obstacle"""
