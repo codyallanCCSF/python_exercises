@@ -30,10 +30,25 @@ class Game:
         
         # Define lane configurations: (y_position, speed, num_cars)
         lane_configs = [
-                {"y": 600, "speed": 3, "count": 3, "color": (255, 140, 0)},
-                {"y": 500, "speed": -4, "count": 2, "color": (138, 43, 226)}
-                ]
-        car_spacing = 220
+            # === BOTTOM HIGHWAY: ALL MOVING RIGHT ===
+            # Lane 1 (Bottom-most) - Slow
+            {"y": 640, "speed": 2, "count": 3, "color": (255, 140, 0)},
+            # Lane 2 - Medium
+            {"y": 560, "speed": 3, "count": 2, "color": (0, 255, 255)},
+            # Lane 3 (Below Median) - Fast
+            {"y": 480, "speed": 5, "count": 2, "color": (255, 20, 147)},
+            
+            # [MEDIAN SAFE ZONE SITS HERE AROUND Y=460 to Y=500]
+            
+            # === TOP HIGHWAY: ALL MOVING LEFT ===
+            # Lane 4 (Above Median) - Slow/Packed
+            {"y": 320, "speed": -3, "count": 3, "color": (255, 255, 0)},
+            # Lane 5 - Medium
+            {"y": 240, "speed": -5, "count": 3, "color": (138, 43, 226)},
+            # Lane 6 (Top-most) - Fast
+            {"y": 160, "speed": -7, "count": 2, "color": (255, 0, 0)}
+            ]
+        car_spacing = 260
 
         # Loop through configurations
         for lane in lane_configs:

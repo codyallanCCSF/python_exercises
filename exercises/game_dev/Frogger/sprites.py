@@ -78,12 +78,11 @@ class Car(pygame.sprite.Sprite):
         self.rect.x += self.speed
 
         # Reset the car to the left
-        if self.rect.left > c.SCREEN_WIDTH:
+        if self.speed > 0 and self.rect.left > c.SCREEN_WIDTH:
             self.rect.right = 0
 
-        elif self.speed < 0:
-            if self.rect.right < 0:
-                self.rect.left = c.SCREEN_WIDTH
+        if self.speed < 0 and self.rect.right < 0:
+            self.rect.left = c.SCREEN_WIDTH + 40
 
 
 
